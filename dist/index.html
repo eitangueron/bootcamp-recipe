@@ -11,10 +11,23 @@
 
     <input type="text" id="ingredient-input" placeholder="Which ingredient do u poses ?">
     <button id="search-button">Search!</button>
+    <hr>
 
 
 
 
+
+    <script type="text/x-handlebars-template" id="recipe-template">
+        <div class="recipe">
+            <a href="{{href}}" target="_blank">{{title}}</a>
+            <img src="{{thumbnail}}">
+            <ul class="ingredients">
+                {{#each ingredients}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </script>
 
 
 
