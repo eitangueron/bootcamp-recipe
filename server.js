@@ -11,10 +11,6 @@ app.use(express.static(path.join(__dirname,'/node_modules')))
 
 
 
-app.get('/sanity',function(req,res){
-    console.log("OK")
-})
-
 app.get('/recipes/:ingredient',function(req,res){
     const ingredient = req.params.ingredient
     urllib.request(`https://recipes-goodness.herokuapp.com/recipes/${ingredient}`,function(err,response){
@@ -24,7 +20,8 @@ app.get('/recipes/:ingredient',function(req,res){
             thumbnail: recipe.thumbnail,
             href: recipe.href,
             ingredients: recipe.ingredients}))
-        res.send(results[0])   //array! ** notice returning just Index 0 right now!
+        const maxNumOfRecipes = 9
+        res.send(results.slice(0,maxNumOfRecipes-1))   //array! ** notice returning just 9 items right now!
     })
 })
 

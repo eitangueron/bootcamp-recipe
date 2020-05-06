@@ -13,15 +13,16 @@
     <button id="search-button">Search!</button>
     <hr>
 
-
+    <div id="recipes-container"></div>
 
 
 
     <script type="text/x-handlebars-template" id="recipe-template">
         <div class="recipe">
             <a href="{{href}}" target="_blank">{{title}}</a>
-            <img src="{{thumbnail}}">
+            <span><img src="{{thumbnail}}"></span>
             <ul class="ingredients">
+                <p>Ingredients:</p>
                 {{#each ingredients}}
                 <li>{{this}}</li>
                 {{/each}}

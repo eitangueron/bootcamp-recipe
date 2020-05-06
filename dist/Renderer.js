@@ -5,7 +5,7 @@ class Renderer{
     
     render(data){
        const newHTML = template(data)
-       $('body').append(newHTML)
+       $('#recipes-container').append(newHTML)
     }
 }
 

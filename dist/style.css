@@ -1,5 +1,37 @@
+body{
+    background-color: #F5AB35;
+}
+#recipes-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: 15px;
+    row-gap: 15px;
+}
+
+.recipe{
+    border: 3px inset black;
+    align-items: center;
+    display: block;
+    background-color: #F7CA18;
+    border-radius: 25px;
+}
+
+p{
+    margin-left: -30px;
+    text-decoration: underline;
+    font-size: 22px;
+    font-weight: 500;
+}
+
 a{
     display: block;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    text-align: center;
+    color: unset;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
 }
 
 img{
@@ -7,3 +39,28 @@ img{
     height: auto;
 }
 
+span{
+    text-align: center;
+    display: block;
+}
+
+li{
+    font-size: 20px;
+}
+
+input{
+    padding: 15px;
+    font-size: 13px;
+    width: 180px;
+}
+
+button{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    height: 49px;
+    width: 110px;
+    font-size: 20px;
+    background-color: rgb(245, 207, 53);
+    border-radius: 7px;
+    margin-left: 10px;
+}
